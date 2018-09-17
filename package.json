@@ -1,0 +1,29 @@
+{
+  "name": "miniprogram-cli",
+  "version": "1.0.0",
+  "description": "小程序 脚手架",
+  "main": "index.js",
+  "repository": "https://github.com/x-shadow-x/miniprogram-cli.git",
+  "author": "junyanliu",
+  "license": "MIT",
+  "bin": {
+    "minipro": "./bin/minipro.js"
+  },
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^9.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest-node": "^2.0.2"
+  },
+  "dependencies": {
+    "download-git-repo": "^1.1.0",
+    "inquirer": "^6.2.0",
+    "request": "^2.88.0"
+  }
+}

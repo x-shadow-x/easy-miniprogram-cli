@@ -1,0 +1,305 @@
+@navHeight: 50px;
+@bannerHeight: 700px;
+@iconWidth: 70px;
+@iconHeight: 70px;
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  color: #eee;
+  font-weight: 900;
+  background: #d10000;
+  letter-spacing: 7px;
+  padding: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.hr {
+  width: 100%;
+  height: 2px;
+  margin: 20px auto;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  background: #444 url("../imgs/banner.jpg") no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.newNav {
+  background:rgba(100,100,100,0.7);
+  width:100%;
+  position:fixed;
+  height:@navHeight;
+  top:0;
+  z-index:1000;
+}
+
+.showSubMenu {
+  //因为使用了jQuery的动画显示效果~所以这个类仅仅用在js函数中用于判断侧边栏是显示状态还是隐藏状态
+}
+
+nav {
+  background: transparent;
+  height: @navHeight;
+
+  .logo {
+    float: left;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.5px; //设置字体间的间距
+    float: left;
+    line-height: @navHeight;
+    padding-left: 10px;
+  }
+
+  .menu {
+    margin: 0;
+    float: right;
+    width: 32px;
+    padding-right: 10px;
+    a {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      z-index: 1001;
+      hr {
+        width: 80%;
+      }
+    }
+
+    ul,
+    #myHover{
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      display: none;
+
+     // background: #26b094;
+
+      li {
+        padding-left: 10px;
+        line-height: @navHeight;
+        width:100%;
+        &:first-child {
+          border-top:1px solid #fff;
+        }
+      }
+    }
+    ul {
+      background-color:rgba(38,176,148,0.7);
+      width: 320px;
+      padding: 50px 0 0 0;
+      list-style: none;
+      right: 0;
+    }
+    #myHover {
+      background-color:rgba(10,10,10,0.6);
+      left: 0;
+    }
+
+  }
+}
+
+#banner {
+  color: #eee;
+  background: transparent;
+  height: @bannerHeight;
+
+  .inner {
+    max-width: 320px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+
+    h1 {
+      margin: 0;
+    }
+
+    .pargraph {
+      line-height: 30px;
+      margin: 30px;
+    }
+
+    button {
+      padding: 15px 60px;
+    }
+
+    .more {
+      margin-top: 70px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.green-section {
+  text-align: center;
+  background: rgba(96, 153, 148, 0.9);
+  color: #fff;
+  padding: 100px 0;
+
+  .hr {
+    background: #52b096;
+    width: 60%;
+  }
+
+  .icon-group {
+
+    .icon {
+      display: inline-block;
+      height: @iconHeight;
+      width: @iconWidth;
+      border: 2px solid #52b096;
+      transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      margin: 32px 32px;
+    }
+  }
+
+}
+
+.gray-section {
+  background: rgba(37, 47, 52, 0.9);
+  color: #fff;
+  .image-section {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .article-preview {
+    font-size: 0;
+    > div {
+      //子元素全部浮动了
+      float: left;
+    }
+
+    .text-section {
+      max-width: 55%;
+      position: relative;
+      top: 68px;
+      left: 50px;
+      > * {
+        width: 90%;
+      }
+      h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+    }
+
+    &:nth-child(odd) {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+.purple-section {
+  background: rgba(63,57,101,0.9);
+  color: #fff;
+  padding: 80px;
+
+  .heading-wrapper {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .hr {
+    background: #373259;
+    width: 60%;
+  }
+
+  .card {
+    float: left;
+    width: 50%;
+    min-height: 300px;
+    padding: 32px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:nth-child(1) {
+      background-color: rgba(0,0,0,0.05);
+    }
+    &:nth-child(2) {
+      background-color: rgba(0,0,0,0.09);
+    }
+    &:nth-child(3) {
+      background-color: rgba(0,0,0,0.13);
+    }
+    &:nth-child(4) {
+      background-color: rgba(0,0,0,0.17);
+    }
+    &:nth-child(5) {
+      background-color: rgba(0,0,0,0.21);
+    }
+    &:nth-child(6) {
+      background-color: rgba(0,0,0,0.25);
+    }
+  }
+}
+
+footer {
+  background: rgba(32,32,32,0.98);
+  color: #fff;
+  min-height: 240px;
+  text-align: center;
+
+  ul.share-group {
+    padding: 50px;
+    li {
+      display: inline-block;
+      padding: 24px;
+    }
+  }
+  .copy {
+    text-align: center;
+  }
+}
